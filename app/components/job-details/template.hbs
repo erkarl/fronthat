@@ -10,9 +10,10 @@
 <div class="job-details-content" itemprop="description">
   {{markdown-to-html job.attributes.description}}
 </div>
+{{subscribe-area}}
 <div class="job-details-main-toolbar">
   {{#link-to 'index' class="nav-button"}}
-    Back
+    View Similar
   {{/link-to}}
   <a href={{job.attributes.url}} target="_blank" class="nav-button" itemprop="url">
     Apply

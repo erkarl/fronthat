@@ -1,28 +1,47 @@
 import Ember from 'ember';
+import { capitalizeFirstLetter } from 'fronthat/utils/string-manipulation';
 
 export default Ember.Route.extend({
   model(params) {
+    if (params && params.q && params.query && params.q === params.query) {
+      return params.query;
+    }
     if (params.q) {
       this.transitionTo('remote-jobs', params.q, { queryParams: { q: 'null' }});
     }
+    if (!params.query) {
+      this.transitionTo('index');
+    }
+    return params.query;
+  },
+  setupController(controller, model) {
+    this._super(controller, model);
+    controller.setSearch(model);
   },
   actions: {
     filterBySearch(searchQuery) {
-      this.transitionTo('remote-jobs', searchQuery);
+      if (!searchQuery) {
+        this.transitionTo('index');
+      } else {
+        this.transitionTo('remote-jobs', searchQuery
+          .replace(/\s+/g, '-').toLowerCase()
+        );
+      }
     }
   },
   afterModel: function(model) {
     this.setHeadTags(model);
   },
-  setHeadTags: function() {
-    const description = 'Curated collection of 100% remote frontend development and design jobs.';
+  setHeadTags: function(model) {
+    const title = `${capitalizeFirstLetter(model)} Remote Jobs`;
+    const description = `Curated collection of ${title}. Last updated 1 day ago.`;
     var headTags = [
       {
         type: 'meta',
         tagId: 'meta-og-title',
         attrs: {
           name: 'og:title',
-          content: 'Remote Frontend Jobs',
+          content: title,
         }
       },
       {
@@ -30,7 +49,7 @@ export default Ember.Route.extend({
         tagId: 'meta-twitter-title',
         attrs: {
           name: 'twitter:title',
-          content: 'Remote Frontend Jobs',
+          content: title,
         }
       },
       {
@@ -106,7 +125,6 @@ export default Ember.Route.extend({
         }
       },
     ];
-
     this.set('headTags', headTags);
   },
 });

@@ -2643,13 +2643,6 @@ ember-cli-head@^0.2.0, ember-cli-head@^0.2.1:
     ember-cli-version-checker "^1.1.6"
     fastboot-filter-initializers "^0.0.2"
 
-ember-cli-head@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-head/-/ember-cli-head-0.3.0.tgz#73fbf3e65033f49c2367b87a7647d592a7f055bd"
-  dependencies:
-    ember-cli-babel "^6.1.0"
-    ember-cli-htmlbars "^2.0.1"
-
 ember-cli-htmlbars-inline-precompile@^0.4.0:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars-inline-precompile/-/ember-cli-htmlbars-inline-precompile-0.4.3.tgz#4123f507fea6c59ba4c272ef7e713a6d55ba06c9"
@@ -3108,6 +3101,13 @@ ember-native-dom-event-dispatcher@^0.6.0:
   resolved "https://registry.yarnpkg.com/ember-native-dom-event-dispatcher/-/ember-native-dom-event-dispatcher-0.6.3.tgz#3b2f10dcf82f9aaa4dd211a704ac511fd8714720"
   dependencies:
     ember-cli-babel "^6.4.1"
+
+ember-native-dom-helpers@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/ember-native-dom-helpers/-/ember-native-dom-helpers-0.5.2.tgz#ba6123230fc32c3350f90a8f9183584a022215fa"
+  dependencies:
+    broccoli-funnel "^1.1.0"
+    ember-cli-babel "^6.1.0"
 
 ember-one-way-controls@^2.0.0:
   version "2.0.0"

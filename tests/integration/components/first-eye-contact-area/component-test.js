@@ -9,8 +9,3 @@ test('it has first eye contact area', function(assert) {
   this.render(hbs`{{first-eye-contact-area}}`);
   assert.equal(this.$('.first-eye-contact-area').length, 1);
 });
-
-test('it has second focus point', function(assert) {
-  this.render(hbs`{{first-eye-contact-area}}`);
-  assert.equal(this.$('.second-focus-point').length, 1);
-});

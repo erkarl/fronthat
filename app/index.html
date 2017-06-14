@@ -10,6 +10,8 @@
     <noscript><link rel="stylesheet" href="{{rootURL}}assets/vendor.css"></noscript>
     <link rel="preload" href="{{rootURL}}assets/fronthat.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{rootURL}}assets/fronthat.css"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></noscript>
 
     {{content-for "head"}}
     <style>
@@ -23,7 +25,7 @@
           padding: 0
       }
       body {
-          font-family: Verdana, Geneva, sans-serif
+          font-family: 'Open Sans', Verdana, Geneva, sans-serif
       }
       body,
       h1,
@@ -41,6 +43,12 @@
       a {
           color: #616161;
           text-decoration: none
+      }
+      .search-results-info {
+        width: 66.6%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 1rem;
       }
       .simple-message {
         width: 50%;
@@ -62,8 +70,8 @@
       }
       .first-eye-contact-area-container {
           text-align: center;
-          background: #212121;
-          color: #F5F5F5
+          background-color: #F5F5F5;
+          color: #282828;
       }
       .learn-more-container {
           display: flex;
@@ -77,7 +85,7 @@
           text-transform: uppercase;
           letter-spacing: .125rem;
           font-size: 2rem;
-          padding: 1.875rem 1.25rem 0
+          padding: 1.875rem 1.25rem;
       }
       .second-focus-point {
           width: 50%;
@@ -89,16 +97,15 @@
           min-height: 1.75rem;
           background: 0 0;
       }
-      .subscribe-container {
-          display: flex;
-          justify-content: center;
-          align-items: center
+      .subscribe-header {
+        width: 100%;
+        text-align: center;
       }
       .search-area {
-          margin: 1.563rem auto;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        margin: 1.563rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .post-a-job {
         border: none;
@@ -139,17 +146,10 @@
         font-weight: 100;
         box-sizing: border-box;
       }
-      .email-input {
-        background-color: #424242;
-        color: #F5F5F5;
-        font-size: .813rem;
-        margin-right: 0.5rem;
-        height: 100%;
-      }
       .search-box {
         width: 66.6%;
         height: 3rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
         background-color: #F5F5F5;
         color: #424242;
         margin: 0;
@@ -199,19 +199,18 @@
       .job-details-content,
       .job-item-content,
       .question-container {
-          padding: 1.25rem
+        padding: 1.25rem
       }
       .main-toolbar {
           z-index: 1;
           min-height: 3.875rem;
           background: #212121;
-          width: 100%;
+          width: 100vw;
           position: fixed;
           top: 0;
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
-          box-shadow: 0 .3125rem 1.25rem #212121
       }
       .content {
           display: flex;
@@ -468,9 +467,8 @@
           }
       }
       @media (max-width: 768px) {
-          .email-input,
           .nav-button {
-              font-weight: 400
+            font-weight: 400
           }
           h1 {
               font-size: .875rem
@@ -491,7 +489,9 @@
             height: 30vh;
           }
           .fronthat-logo {
-              width: 7.5rem
+            margin-top: 0.35rem;
+            margin-left: 0.5rem;
+            width: 4.5rem
           }
           .navigation-container .nav-button {
               margin-right: .5rem
@@ -506,14 +506,7 @@
           .job-title {
             max-width: 14.5rem;
           }
-          .subscribe-container {
-              flex-direction: column
-          }
-          .email-input {
-              margin-right: 0;
-              margin-bottom: 0.5rem
-          }
-          .subscribe-button, .email-input {
+          .subscribe-button {
             width: 12rem;
             max-width: 100%
           }
@@ -544,9 +537,6 @@
           }
           .fronthat-logo {
               height: 2.5rem
-          }
-          .subscribe-container {
-              height: 2.25rem;
           }
       }
     </style>

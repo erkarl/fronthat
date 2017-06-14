@@ -1,14 +1,5 @@
 import Ember from 'ember';
+import SearchableMixin from 'fronthat/mixins/searchable';
 
-export default Ember.Controller.extend({
-  applicationController: Ember.inject.controller('application'),
-  jobFetchStatus: Ember.computed.alias('applicationController.jobFetchStatus'),
-  actions: {
-    firstVisibleChanged(object, index) {
-      this.set('scrollPosition', index.toString());
-    },
-    filterBySearch(searchQuery) {
-      this.set('search', searchQuery);
-    }
-  },
+export default Ember.Controller.extend(SearchableMixin, {
 });

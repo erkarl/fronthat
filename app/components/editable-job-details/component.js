@@ -118,7 +118,7 @@ export default Ember.Component.extend({
         </div>
         <div class="job-details-content">
           <p>It's free and allows you to reach hundreds of frontend developers and designers.</p>
-          <p>Your job listing will remain on this site until 200 newer posts are added. Afterwards your job listing will expire and be removed. You can always post the job again.</p>
+          <p>By posting directly to FrontHAT your job listing will remain on top of the list for 30 days. Afterwards your job listing will expire and be removed. You can always post the job again.</p>
           <p>All jobs are reviewed within 24 hours before being added to the site in order to ensure quality.</p>
         </div>
         <div class="job-details-secondary-toolbar">
