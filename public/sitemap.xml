@@ -10,6 +10,39 @@
     <loc>https://fronthat.com/about</loc>
   </url>
   <url>
+    <loc>https://fronthat.com/remote-jobs/react</loc>
+  </url>
+  <url>
+    <loc>https://fronthat.com/remote-jobs/angular</loc>
+  </url>
+  <url>
+    <loc>https://fronthat.com/remote-jobs/ember</loc>
+  </url>
+  <url>
+    <loc>https://fronthat.com/remote-jobs/vue</loc>
+  </url>
+  <url>
+    <loc>https://fronthat.com/remote-jobs/design</loc>
+  </url>
+  <url>
+    <loc>https://fronthat.com/remote-jobs/javascript</loc>
+  </url>
+  <url>
+    <loc>https://fronthat.com/jobs/04/07/2017/frontend-developer</loc>
+  </url>
+  <url>
+    <loc>https://fronthat.com/jobs/04/07/2017/senior-frontend-developer-eu</loc>
+  </url>
+  <url>
+    <loc>https://fronthat.com/jobs/04/07/2017/lead-ui-artist</loc>
+  </url>
+  <url>
+    <loc>https://fronthat.com/jobs/04/07/2017/front-end-developer-australia-only</loc>
+  </url>
+  <url>
+    <loc>https://fronthat.com/jobs/04/07/2017/front-end-developer-us</loc>
+  </url>
+  <url>
     <loc>https://fronthat.com/jobs/03/07/2017/senior-software-engineer-frontend-us-canada</loc>
   </url>
   <url>
@@ -593,20 +626,5 @@
   </url>
   <url>
     <loc>https://fronthat.com/jobs/16/05/2017/ui-designer-and-user-story-writer</loc>
-  </url>
-  <url>
-    <loc>https://fronthat.com/jobs/16/05/2017/product-designer</loc>
-  </url>
-  <url>
-    <loc>https://fronthat.com/jobs/15/05/2017/front-end-developer-us-KkC7TzUNn4nLqFKneKh</loc>
-  </url>
-  <url>
-    <loc>https://fronthat.com/jobs/15/05/2017/senior-interactive-designer</loc>
-  </url>
-  <url>
-    <loc>https://fronthat.com/jobs/15/05/2017/wordpress-frontend-web-designer</loc>
-  </url>
-  <url>
-    <loc>https://fronthat.com/jobs/15/05/2017/front-end-developer-us</loc>
   </url>
 </urlset>
