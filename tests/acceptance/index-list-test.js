@@ -4,6 +4,16 @@ import { fillIn, keyEvent } from 'ember-native-dom-helpers';
 
 moduleForAcceptance('Acceptance | index list');
 
+test('visiting / shows 4 categories and 5 posts in each of them', async function(assert) {
+  await visit('/');
+  const categories = find('.listing-summary');
+  assert.equal(categories.length, 4);
+  for (let category of categories) {
+    const jobListings = find('.job-item', category);
+    assert.equal(jobListings.length, 5);
+  }
+});
+
 test('visiting / shows 5+ jobs', async function(assert) {
   await visit('/');
   await waitFor(500);
