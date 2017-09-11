@@ -2,12 +2,5 @@
 {{first-eye-contact-area}}
 {{#job-list-container as |jobs fetching|
 }}
-  {{job-list
-    jobs=jobs
-    search=search
-    fetching=fetching
-    scrollPosition=scrollPosition
-    firstVisibleChanged=(action 'firstVisibleChanged')
-    filterBySearch=(route-action 'filterBySearch')
-  }}
+  {{listing-summaries jobs=jobs}}
 {{/job-list-container}}
