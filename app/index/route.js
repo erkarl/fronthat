@@ -5,14 +5,14 @@ export default Ember.Route.extend({
     this.setHeadTags(model);
   },
   setHeadTags: function() {
-    const description = 'Curated collection of 100% remote frontend development and design jobs.';
+    const description = 'Curated collection of 100% remote development and design jobs.';
     var headTags = [
       {
         type: 'meta',
         tagId: 'meta-og-title',
         attrs: {
           name: 'og:title',
-          content: 'Remote Frontend Jobs',
+          content: 'Remote development and design jobs',
         }
       },
       {
@@ -20,7 +20,7 @@ export default Ember.Route.extend({
         tagId: 'meta-twitter-title',
         attrs: {
           name: 'twitter:title',
-          content: 'Remote Frontend Jobs',
+          content: 'Remote development and design jobs',
         }
       },
       {
