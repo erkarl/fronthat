@@ -25,7 +25,7 @@ export default Ember.Component.extend({
 
   fullstackJobs: computed('jobs', function() {
     return this.get('jobs')
-      .filter((job) => job.attributes.category === 'fullstack');
+      .filter((job) => job.attributes.category === 'full-stack');
   }),
 
   fullstackJobsShort: computed('fullstackJobs', function() {
