@@ -114,12 +114,11 @@ export default Ember.Component.extend({
     {{#if infoText}}
       <div class="job-details">
         <div class="job-details-main-toolbar">
-          <h1>Post a Job</h1>
+          <h1>Post a Job - $49</h1>
         </div>
         <div class="job-details-content">
-          <p>It's free and allows you to reach hundreds of remote developers and designers.</p>
-          <p>By posting directly to FrontHAT your job listing will remain on top of the list for 30 days. Afterwards your job listing will expire and be removed. You can always post the job again.</p>
-          <p>All jobs are reviewed within 24 hours before being added to the site in order to ensure quality.</p>
+          <p>It allows you to reach hundreds of remote developers and designers. Listings need to be remote.</p>
+          <p>By posting directly to FrontHAT your job listing will remain <strong>on top of the list</strong> for 30 days and <strong>be highlighted</strong>. It will cost $49. Afterwards your job listing will expire and be removed. You can always post the job again.</p>
         </div>
         <div class="job-details-secondary-toolbar">
           <a href="#" class="nav-button" {{action 'continuePosting'}} data-test-job-info-ok>
@@ -164,7 +163,7 @@ export default Ember.Component.extend({
         <div class="toolbar bottom-toolbar">
           {{#if postAJobTask.isIdle}}
             <a href="#" class="nav-button" onclick={{perform postAJobTask}} data-test-post-a-job-button-idle>
-              Post a Job
+              Post a Job - $49
             </a>
           {{else}}
             <a href="#" class="nav-button" data-test-post-a-job-button-loading>
