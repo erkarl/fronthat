@@ -16,7 +16,6 @@ export default Ember.Component.extend({
       fetching=fetching
       scrollPosition=scrollPosition
       firstVisibleChanged=firstVisibleChanged
-      filterBySearch=filterBySearch
     }}
   `
 });

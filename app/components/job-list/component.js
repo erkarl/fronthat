@@ -34,12 +34,6 @@ export default Ember.Component.extend({
     return this.get('jobs');
   }),
 
-  filterBySearchTask: task(function * (searchQuery) {
-    const THROTTLE_DELAY = this.get('mobile') ? 2000 : 500;
-    yield timeout(THROTTLE_DELAY);
-    this.get('filterBySearch')(searchQuery);
-  }).restartable(),
-
   layout: hbs`
     {{#if (eq fetching true)}}
       {{loading-indicator loadingText='Updating...'}}
@@ -53,11 +47,7 @@ export default Ember.Component.extend({
     {{#if jobs}}
       {{search-area
         searchQuery=search
-        searchChanged=(perform filterBySearchTask)
       }}
-      {{#if filterBySearchTask.isRunning}}
-        {{loading-indicator loadingText='Searching...'}}
-      {{/if}}
       {{#if search}}
         <div class="search-results-info">
           <h2>{{sortedJobs.length}} remote {{search}} jobs</h2>
