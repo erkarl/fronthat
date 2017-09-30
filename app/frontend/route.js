@@ -1,16 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(params) {
-    if (params.q) {
-      this.transitionTo('remote-jobs', params.q, { queryParams: { q: 'null' }});
-    }
-  },
-  actions: {
-    filterBySearch(searchQuery) {
-      this.transitionTo('remote-jobs', searchQuery);
-    }
-  },
   afterModel: function(model) {
     this.setHeadTags(model);
   },
