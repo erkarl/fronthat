@@ -9,7 +9,7 @@ export default Ember.Component.extend({
   }),
 
   layout: hbs`
-    <h1>Filter is: {{filter}}</h1>
+    <div>{{filter}} jobs <span class="jobs-count">{{filteredJobs.length}}</span></div>
     {{job-list
       jobs=filteredJobs
       search=search
