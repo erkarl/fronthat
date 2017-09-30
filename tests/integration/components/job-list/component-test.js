@@ -22,7 +22,7 @@ test('it does render everything in FastBoot mode', function(assert) {
   this.set('fastboot', fastbootEnabled);
   this.render(hbs`{{job-list jobs=jobs fastboot=fastboot}}`);
 
-  assert.equal(this.$('.job-item').length, 200);
+  assert.equal(this.$('.job-item').length, 197);
 });
 
 test('it sorts jobs by timestamp in FastBoot mode', function(assert) {
