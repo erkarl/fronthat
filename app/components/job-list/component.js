@@ -2,7 +2,6 @@ import Ember from 'ember';
 import hbs from 'htmlbars-inline-precompile';
 const { computed } = Ember;
 import _ from 'lodash';
-import { task, timeout } from 'ember-concurrency';
 
 const isMobile = () => {
   var mobile = false;
@@ -50,7 +49,7 @@ export default Ember.Component.extend({
       }}
       {{#if search}}
         <div class="search-results-info">
-          <h2>{{sortedJobs.length}} remote {{search}} jobs</h2>
+          <h2><span class="search-results-info-count">{{sortedJobs.length}}</span> remote {{search}} jobs</h2>
         </div>
       {{/if}}
       {{#if isFastBoot}}
