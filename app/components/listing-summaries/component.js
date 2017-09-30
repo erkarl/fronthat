@@ -43,21 +43,25 @@ export default Ember.Component.extend({
 
   layout: hbs`
     {{listing-summary
+      url='frontend'
       header="Frontend"
       jobs=frontendJobsShort
       totalCount=frontendJobs.length
     }}
     {{listing-summary
+      url='backend'
       header="Backend"
       jobs=backendJobsShort
       totalCount=backendJobs.length
     }}
     {{listing-summary
-      header="Fullstack"
+      url='full-stack'
+      header="Full Stack"
       jobs=fullstackJobsShort
       totalCount=fullstackJobs.length
     }}
     {{listing-summary
+      url='design'
       header="Design"
       jobs=designJobsShort
       totalCount=designJobs.length
