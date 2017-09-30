@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     this.setHeadTags(model);
   },
   setHeadTags: function() {
-    const description = 'Curated collection of 100% remote frontend development and design jobs.';
+    const description = 'Curated collection of 100% remote frontend development jobs.';
     var headTags = [
       {
         type: 'meta',
@@ -52,7 +52,7 @@ export default Ember.Route.extend({
         tagId: 'meta-og-url',
         attrs: {
           name: 'og:url',
-          content: 'https://fronthat.com'
+          content: 'https://fronthat.com/frontend'
         }
       },
       {
