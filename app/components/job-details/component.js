@@ -24,7 +24,6 @@ export default Ember.Component.extend(ScrollToTop, {
     </div>
     {{subscribe-area}}
     <div class="job-details-main-toolbar">
-      {{job.attributes.category}}
       {{#link-to job.attributes.category class="nav-button view-similar-link"}}
         View Similar
       {{/link-to}}

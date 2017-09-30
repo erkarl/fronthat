@@ -1,6 +1,7 @@
 import { test } from 'qunit';
 import moduleForAcceptance from 'fronthat/tests/helpers/module-for-acceptance';
 import { fillIn, keyEvent } from 'ember-native-dom-helpers';
+import jobs from '../../mirage/json/jobs';
 
 moduleForAcceptance('Acceptance | filtered job routes');
 
@@ -15,29 +16,42 @@ const getSearchResultsCount = () => {
   return getCount(find('.search-results-info-count'));
 };
 
-const assertFilteredRoute = async (searchQuery, allCount, filteredCount, assert) => {
+const assertFilteredRoute = async (searchQuery, allCount, assert) => {
   assert.equal(getJobsCount(), allCount);
   await fillIn('.search-box', searchQuery);
   await keyEvent('.search-box', 'keyup', 40);
-  assert.equal(getSearchResultsCount(), filteredCount);
+  const LESS_THAN_ALL = allCount - 1;
+  assert.equal(getSearchResultsCount() < LESS_THAN_ALL, true);
+};
+
+const findCountByCategory = (category) => {
+  return jobs
+    .all
+    .data
+    .filter((job) => job.attributes.category === category)
+    .length;
 };
 
 test('frontend search only shows frontend category listings', async function(assert) {
-  await visit('/frontend');
-  assertFilteredRoute('frontend', 70, 17, assert);
+  const category = 'frontend';
+  await visit(`${category}`);
+  assertFilteredRoute('frontend', findCountByCategory(category), assert);
 });
 
 test('backend search only shows backend category listings', async function(assert) {
-  await visit('/backend');
-  assertFilteredRoute('backend', 62, 7, assert);
+  const category = 'backend';
+  await visit(`${category}`);
+  assertFilteredRoute('backend', findCountByCategory(category), assert);
 });
 
 test('fullstack search only shows fullstack category listings', async function(assert) {
-  await visit('/full-stack');
-  assertFilteredRoute('full', 37, 15, assert);
+  const category = 'full-stack';
+  await visit(`${category}`);
+  assertFilteredRoute('full', findCountByCategory(category), assert);
 });
 
 test('design search only shows design category listings', async function(assert) {
-  await visit('/design');
-  assertFilteredRoute('photo', 28, 5, assert);
+  const category = 'design';
+  await visit(`${category}`);
+  assertFilteredRoute('photo', findCountByCategory(category), assert);
 });
