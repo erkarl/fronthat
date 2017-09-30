@@ -11,9 +11,9 @@ export default Ember.Component.extend({
       {{#each jobs as |job|}}
         {{job-item job=job}}
       {{/each}}
-      <div class="show-all">
+      {{#link-to 'frontend' class="show-all"}}
         Show {{totalCount}} more
-      </div>
+      {{/link-to}}
     </div>
   `
 });

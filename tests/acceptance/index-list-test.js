@@ -12,6 +12,9 @@ test('visiting / shows 4 categories and 5 posts in each of them', async function
     const jobListings = find('.job-item', category);
     assert.equal(jobListings.length, 5);
   }
+  const frontendCategory = categories[0];
+  await click(find('.show-all', frontendCategory));
+  assert.equal(currentURL(), '/frontend');
 });
 
 test('visiting / shows 5+ jobs', async function(assert) {

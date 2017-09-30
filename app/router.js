@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('job', { path: '/jobs/:day/:month/:year/:slug' });
+  this.route('frontend');
   this.route('loading');
   this.route('about');
   this.route('not-found');
