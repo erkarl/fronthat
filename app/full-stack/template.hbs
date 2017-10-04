@@ -1,0 +1,12 @@
+{{title 'Remote full-stack jobs | FrontHAT'}}
+{{#job-list-container as |jobs fetching|
+}}
+  {{filtered-jobs-list
+    filter='full-stack'
+    jobs=jobs
+    search=search
+    fetching=fetching
+    scrollPosition=scrollPosition
+    firstVisibleChanged=(action 'firstVisibleChanged')
+  }}
+{{/job-list-container}}

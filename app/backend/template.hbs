@@ -1,0 +1,12 @@
+{{title 'Remote backend jobs | FrontHAT'}}
+{{#job-list-container as |jobs fetching|
+}}
+  {{filtered-jobs-list
+    filter='backend'
+    jobs=jobs
+    search=search
+    fetching=fetching
+    scrollPosition=scrollPosition
+    firstVisibleChanged=(action 'firstVisibleChanged')
+  }}
+{{/job-list-container}}

@@ -6,7 +6,7 @@ export default Ember.Component.extend({
 
   layout: hbs`
     <div class="first-eye-contact-area">
-      <h1>REMOTE FRONTEND DEVELOPMENT AND DESIGN JOBS</h1>
+      <h1>REMOTE DEVELOPMENT AND DESIGN JOBS</h1>
     </div>
   `
 });
