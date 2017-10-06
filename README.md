@@ -2,7 +2,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/erkarl/fronthat.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/erkarl/fronthat.svg?branch=master)](https://travis-ci.org/erkarl/fronthat)
 
-FrontHAT, a job board for frontend developers and designers - [fronthat.com](https://fronthat.com).
+FrontHAT, a job board for remote developers and designers - [fronthat.com](https://fronthat.com).
 
 #### Overview
 
@@ -29,7 +29,6 @@ You will need the following things properly installed on your computer.
 * [Node.js](https://nodejs.org/) (version >= 4)
 * [Yarn](https://yarnpkg.com/en/)
 * [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
 
 ## Installation
 
