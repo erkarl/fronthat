@@ -18,3 +18,8 @@ testem.log
 .env.deploy.production
 .env.deploy.staging
 .env.deploy.development
+yarn-error.log
+
+# ember-try
+.node_modules.ember-try/
+package.json.ember-try

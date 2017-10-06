@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'fronthat',
-    environment: environment,
+    environment,
     rootURL: '/',
     locationType: 'auto',
     apiURL: process.env.API_URL || 'https://api-beta.fronthat.com',
