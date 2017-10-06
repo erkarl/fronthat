@@ -1,18 +1,27 @@
+---
 language: node_js
 node_js:
-- '6'
+  - "6"
+
 sudo: false
+dist: trusty
+
+addons:
+  chrome: stable
+
 cache:
   yarn: true
+
 before_install:
-- curl -o- -L https://yarnpkg.com/install.sh | bash
-- export PATH=$HOME/.yarn/bin:$PATH
-- yarn global add phantomjs-prebuilt
-- phantomjs --version
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+
 install:
-- yarn install
+  - yarn install --non-interactive
+
 script:
-- yarn test
+  - yarn test
+
 env:
   matrix:
     secure: lYtvjz67JZ8JHGSwwlBEvYpe5Xyzy5MVGSTVav5RLtWzHQVouvlHhcnxhYCYZ1SjT63+XdWohv+FMyOwCcbqAAp+1qxz7myEo57fWb2/TaiO5jbhDb+DCrlHEWlChXmeFICdfkmSxFqeOhGV3aJl6Z8Zhp/zDvXQDQZqs2NTqWIE+U/s4VIhBsiTwXECOpv7tnylcqyPfDw2jvZq6uXMrU6Y21l3gckYN8nHtICQuz6iFCbVRrCe9uHJU1P6+qEeJATD+lDQ9cg2/UbzHOcPxI92PZQYxzdc3+U7AfQ22nrhneuwPCG3hlUSMh5zCzGo/Ub6T9vDUEeaAzuPFVKvYpRpeFNhJu6j7E9s3NlXD3pVfo+d5B2FJ8Kkx1J35z6qP0LvTWmTBE5PF/A7pCGffVZ7T2s0jBRnEtDEFBQ/aXe0cNhTp6Zee1mEBQ8o2UQACUALm4YdlrobDk3jqVpv59gya4uifvxFi+DM9foJa0iyTPNafzdmjcbeB16Lrw3+SzOH2EZ/jGq39mD1q/zqFKy00429Xb5XEApv2w7IbryGKH4B6jhZKEHLqcl6ksvJd09G9DTnbRXv0rzbDJ+CftoY3gXJ7OQC9TFQf81K17M/Ekbf2w0+zyVCbWuAuDl1sE6kKzNSXRWvnYJDbosdaoSQJ9ew97fjB5Hxa1jLjzE=
