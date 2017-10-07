@@ -12,7 +12,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test"
+    "test": "ember test && ember fastboot:test"
   },
   "devDependencies": {
     "@html-next/vertical-collection": "git+https://github.com/html-next/vertical-collection.git",
