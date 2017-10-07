@@ -1,9 +1,8 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
 import hbs from 'htmlbars-inline-precompile';
 
-const { computed } = Ember;
-
-export default Ember.Component.extend({
+export default Component.extend({
   message: "Oops, the page you're looking for wasn't found.",
 
   notFoundTitle: computed('titleText', function() {

@@ -1,6 +1,6 @@
+import EmberObject from '@ember/object';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import Ember from 'ember';
 
 moduleForComponent('job-details', 'Integration | Component | job details', {
   integration: true
@@ -8,7 +8,7 @@ moduleForComponent('job-details', 'Integration | Component | job details', {
 
 test('it displays the title', function(assert) {
 
-  const job = Ember.Object.create({
+  const job = EmberObject.create({
     attributes: {
       title: 'Random Title'
     }

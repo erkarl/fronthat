@@ -1,8 +1,8 @@
-import Ember from 'ember';
+import Mixin from '@ember/object/mixin';
 
-export default Ember.Mixin.create({
+export default Mixin.create({
   didInsertElement() {
     this._super(...arguments);
-    Ember.$(document).scrollTop(0);
+    window.scrollTo(0, 0);
   }
 });

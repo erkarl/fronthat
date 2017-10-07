@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 import JobListActions from '../mixins/job-list-actions';
 
-export default Ember.Route.extend(JobListActions, {
+export default Route.extend(JobListActions, {
   model() {
     if (typeof FastBoot !== 'undefined') {
       return this.fastbootModel();

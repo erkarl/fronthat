@@ -1,6 +1,8 @@
-import Ember from 'ember';
+import { reads } from '@ember/object/computed';
+import { inject as service } from '@ember/service';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
 import hbs from 'htmlbars-inline-precompile';
-const { computed } = Ember;
 import _ from 'lodash';
 
 const isMobile = () => {
@@ -12,9 +14,9 @@ const isMobile = () => {
   return mobile;
 };
 
-export default Ember.Component.extend({
-  fastboot: Ember.inject.service(),
-  isFastBoot: computed.reads('fastboot.isFastBoot'),
+export default Component.extend({
+  fastboot: service(),
+  isFastBoot: reads('fastboot.isFastBoot'),
 
   didInsertElement() {
     this._super(...arguments);

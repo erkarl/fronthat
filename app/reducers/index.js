@@ -1,6 +1,4 @@
-import Ember from 'ember';
-
-const { assign } = Ember;
+import { assign } from '@ember/polyfills';
 
 const initialState = {
   all: [],

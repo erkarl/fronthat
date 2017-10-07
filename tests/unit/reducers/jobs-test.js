@@ -1,9 +1,8 @@
+import { assign } from '@ember/polyfills';
 import reducer from 'fronthat/reducers/index';
 import { module, test } from 'qunit';
 import jobs from 'fronthat/mirage/json/jobs';
 import deepFreeze from 'fronthat/tests/helpers/deep-freeze';
-import Ember from 'ember';
-const { assign } = Ember;
 
 module('Unit | Reducers | jobs');
 

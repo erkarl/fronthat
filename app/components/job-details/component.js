@@ -1,8 +1,8 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import ScrollToTop from '../../mixins/scroll-to-top';
 import hbs from 'htmlbars-inline-precompile';
 
-export default Ember.Component.extend(ScrollToTop, {
+export default Component.extend(ScrollToTop, {
   classNames: ['job-details', 'fadeIn'],
   tagName: 'job-posting',
   itemscope: '',
