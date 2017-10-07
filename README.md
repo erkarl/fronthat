@@ -43,8 +43,14 @@ You will need the following things properly installed on your computer.
 
 ### Running Tests
 
+* `yarn test` to run all test suites
+
+#### Ember Test Suite
 * `ember test`
 * `ember test --server`
+
+#### FastBoot (Server Side Rendering) Tests
+* `ember fastboot:test`
 
 ### Building
 

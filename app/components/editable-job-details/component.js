@@ -165,7 +165,7 @@ export default Component.extend({
               Post a Job - $49
             </a>
           {{else}}
-            <a href="#" class="nav-button" data-test-post-a-job-button-loading>
+            <a href="#" class="nav-button">
               Posting...
             </a>
           {{/if}}
