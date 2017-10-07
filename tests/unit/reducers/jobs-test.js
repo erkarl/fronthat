@@ -1,5 +1,5 @@
 import { assign } from '@ember/polyfills';
-import reducer from 'fronthat/reducers/index';
+import jobsReducer from 'fronthat/reducers/jobs';
 import { module, test } from 'qunit';
 import jobs from 'fronthat/mirage/json/jobs';
 import deepFreeze from 'fronthat/tests/helpers/deep-freeze';
@@ -12,12 +12,12 @@ const initialState = {
 };
 
 test('the initial state is empty', function(assert) {
-  const result = reducer.jobs(undefined, {});
+  const result = jobsReducer(undefined, {});
   assert.deepEqual(result, initialState);
 });
 
 test('deserialize jobs actions parses fetched API response', function(assert) {
-  const result = reducer.jobs(initialState, {
+  const result = jobsReducer(initialState, {
     type: 'DESERIALIZE_JOBS',
     response: [jobs.job1, jobs.job2, jobs.job3]
   });
@@ -26,7 +26,7 @@ test('deserialize jobs actions parses fetched API response', function(assert) {
 });
 
 test('fetching jobs action sets a true flag', function(assert) {
-  const result = reducer.jobs(initialState, {
+  const result = jobsReducer(initialState, {
     type: 'FETCHING_JOBS',
   });
   const expected = assign({}, initialState, {fetching: true});
@@ -34,13 +34,13 @@ test('fetching jobs action sets a true flag', function(assert) {
 });
 
 test('fetching complete action sets a false flag', function(assert) {
-  const previous = reducer.jobs(initialState, {
+  const previous = jobsReducer(initialState, {
     type: 'FETCHING_JOBS',
   });
 
   deepFreeze(previous);
 
-  const result = reducer.jobs(previous, {
+  const result = jobsReducer(previous, {
     type: 'FETCHING_COMPLETE',
   });
 
@@ -49,13 +49,13 @@ test('fetching complete action sets a false flag', function(assert) {
 });
 
 test('fetching error action sets an error flag', function(assert) {
-  const previous = reducer.jobs(initialState, {
+  const previous = jobsReducer(initialState, {
     type: 'FETCHING_JOBS',
   });
 
   deepFreeze(previous);
 
-  const result = reducer.jobs(previous, {
+  const result = jobsReducer(previous, {
     type: 'FETCHING_ERROR',
   });
 
