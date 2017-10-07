@@ -66,7 +66,7 @@ export default Component.extend({
           {{#vertical-collection sortedJobs
             containerSelector="body"
             staticHeight=true
-            minHeight=125
+            estimateHeight=125
             key='@index'
             firstVisibleChanged=firstVisibleChanged
             idForFirstItem=scrollPosition
