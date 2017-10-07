@@ -19,7 +19,7 @@ FrontHAT, a job board for remote developers and designers - [fronthat.com](https
 ##### Testing
 * [ember-cli-mirage](http://www.ember-cli-mirage.com/)
 * [ember-test-selectors](https://github.com/simplabs/ember-test-selectors)
-* [ember-sinon](https://github.com/csantero/ember-sinon) + [ember-sinon-qunit](https://github.com/elwayman02/ember-sinon-qunit)
+* [ember-fastboot-app-tests](https://github.com/kaliber5/ember-fastboot-app-tests)
 
 ## Prerequisites
 
