@@ -15,8 +15,6 @@ test('filling in post a job form', async function(assert) {
   const API_DELAY = 400;
   server.timing = API_DELAY;
   await click(testSelector('post-a-job-button-idle'));
-  const loadingSubmitButton = await find(testSelector('post-a-job-button-loading'));
-  assert.equal(loadingSubmitButton.length, 1, 'Post a Job button is loading');
   await waitFor(API_DELAY);
   assert.equal(currentURL(), '/post-a-job/success', 'It redirect to success route');
 });
