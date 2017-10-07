@@ -1,12 +1,11 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { Promise } from 'rsvp';
 import hbs from 'htmlbars-inline-precompile';
 import { task, timeout } from 'ember-concurrency';
 import fetch from 'fetch';
 import ENV from 'fronthat/config/environment';
 
-const { Promise } = Ember.RSVP;
-
-export default Ember.Component.extend({
+export default Component.extend({
   infoText: true,
 
   didRender() {

@@ -1,11 +1,11 @@
-import Ember from 'ember';
+import { inject as service } from '@ember/service';
+import Mixin from '@ember/object/mixin';
+import { Promise } from 'rsvp';
 import fetch from 'fetch';
 import ENV from 'fronthat/config/environment';
 
-const { Promise } = Ember.RSVP;
-
-export default Ember.Mixin.create({
-  redux: Ember.inject.service(),
+export default Mixin.create({
+  redux: service(),
 
   fetchJobsList() {
     return new Promise((resolve, reject) => {

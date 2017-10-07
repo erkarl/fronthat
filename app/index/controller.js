@@ -1,5 +1,5 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
 import SearchableMixin from 'fronthat/mixins/searchable';
 
-export default Ember.Controller.extend(SearchableMixin, {
+export default Controller.extend(SearchableMixin, {
 });

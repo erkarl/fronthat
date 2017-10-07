@@ -1,6 +1,7 @@
+import { registerAsyncHelper } from '@ember/test';
 import Ember from 'ember';
 
-export default Ember.Test.registerAsyncHelper(
+export default registerAsyncHelper(
   'waitFor', (app, delay) => {
     Ember.Test.promise((resolve) => {
       setTimeout(function() {

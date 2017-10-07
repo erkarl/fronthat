@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import ScrollToTop from '../../mixins/scroll-to-top';
 
-export default Ember.Component.extend(ScrollToTop, {
+export default Component.extend(ScrollToTop, {
   classNames: ['about-page'],
   tagName: 'about'
 });

@@ -1,11 +1,12 @@
-import Ember from 'ember';
-const { Promise } = Ember.RSVP;
+import { inject as service } from '@ember/service';
+import Route from '@ember/routing/route';
+import { Promise } from 'rsvp';
 import fetch from 'fetch';
 import ENV from 'fronthat/config/environment';
 
-export default Ember.Route.extend({
-  redux: Ember.inject.service(),
-  fastboot: Ember.inject.service(),
+export default Route.extend({
+  redux: service(),
+  fastboot: service(),
 
   model(params) {
     const jobs = this.get('redux.store').getState().jobs.all;
