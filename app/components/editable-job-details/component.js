@@ -113,11 +113,15 @@ export default Component.extend({
     {{#if infoText}}
       <div class="job-details">
         <div class="job-details-main-toolbar">
-          <h1>Post a Job - $49</h1>
+          {{#if free}}
+            <h1>Post a Job - <span class="strike-through">$49</span> <b>FREE</b></h1>
+          {{else}}
+            <h1>Post a Job - $49</h1>
+          {{/if}}
         </div>
         <div class="job-details-content">
           <p>It allows you to reach hundreds of remote developers and designers. Listings need to be remote.</p>
-          <p>By posting directly to FrontHAT your job listing will remain <strong>on top of the list</strong> for 30 days and <strong>be highlighted</strong>. It will cost $49. Afterwards your job listing will expire and be removed. You can always post the job again.</p>
+          <p>By posting directly to FrontHAT your job listing will remain <strong>on top of the list</strong> for 30 days and <strong>be highlighted</strong>. {{#unless free}}It will cost $49. {{/unless}}Afterwards your job listing will expire and be removed. You can always post the job again.</p>
         </div>
         <div class="job-details-secondary-toolbar">
           <a href="#" class="nav-button" {{action 'continuePosting'}} data-test-job-info-ok>
@@ -162,7 +166,11 @@ export default Component.extend({
         <div class="toolbar bottom-toolbar">
           {{#if postAJobTask.isIdle}}
             <a href="#" class="nav-button" onclick={{perform postAJobTask}} data-test-post-a-job-button-idle>
-              Post a Job - $49
+              {{#if free}}
+                Post a Job - <span class="strike-through">$49</span> <b>FREE</b>
+              {{else}}
+                Post a Job - $49
+              {{/if}}
             </a>
           {{else}}
             <a href="#" class="nav-button">
