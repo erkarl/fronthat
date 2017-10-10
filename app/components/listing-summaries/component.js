@@ -41,6 +41,24 @@ export default Component.extend({
     return this.get('designJobs').slice(0, 5);
   }),
 
+  mobileJobs: computed('jobs', function() {
+    return this.get('jobs')
+      .filter((job) => job.attributes.category === 'ios-and-android');
+  }),
+
+  mobileJobsShort: computed('mobileJobs', function() {
+    return this.get('mobileJobs').slice(0, 5);
+  }),
+
+  otherJobs: computed('jobs', function() {
+    return this.get('jobs')
+      .filter((job) => job.attributes.category === 'other');
+  }),
+
+  otherJobsShort: computed('otherJobs', function() {
+    return this.get('otherJobs').slice(0, 5);
+  }),
+
   layout: hbs`
     {{listing-summary
       url='frontend'
@@ -65,6 +83,18 @@ export default Component.extend({
       header="Design"
       jobs=designJobsShort
       totalCount=designJobs.length
+    }}
+    {{listing-summary
+      url='ios-and-android'
+      header="iOS and Android"
+      jobs=mobileJobsShort
+      totalCount=mobileJobs.length
+    }}
+    {{listing-summary
+      url='other'
+      header="Other"
+      jobs=otherJobsShort
+      totalCount=otherJobs.length
     }}
   `
 });

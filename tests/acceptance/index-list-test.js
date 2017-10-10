@@ -4,10 +4,10 @@ import _ from 'lodash';
 
 moduleForAcceptance('Acceptance | index list');
 
-test('visiting / shows 4 categories and 5 posts in each of them', async function(assert) {
+test('visiting / shows 6 categories and 5 posts in each of them', async function(assert) {
   await visit('/');
   const categories = find('.listing-summary');
-  assert.equal(categories.length, 4);
+  assert.equal(categories.length, 6);
   for (let category of categories) {
     const jobListings = find('.job-item', category);
     assert.equal(jobListings.length, 5);
@@ -55,6 +55,18 @@ test('visiting / and clicking on show more full stack category', async function(
 test('visiting / and clicking on show more design category', async function(assert) {
   await visit('/');
   const url = '/design';
+  assertShowMoreCategory(getCategory(url), url, assert);
+});
+
+test('visiting / and clicking on show more mobile category', async function(assert) {
+  await visit('/');
+  const url = '/ios-and-android';
+  assertShowMoreCategory(getCategory(url), url, assert);
+});
+
+test('visiting / and clicking on show more other category', async function(assert) {
+  await visit('/');
+  const url = '/other';
   assertShowMoreCategory(getCategory(url), url, assert);
 });
 
