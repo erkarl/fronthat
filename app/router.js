@@ -12,6 +12,8 @@ Router.map(function() {
   this.route('backend');
   this.route('full-stack');
   this.route('design');
+  this.route('ios-and-android');
+  this.route('other');
   this.route('loading');
   this.route('about');
   this.route('not-found');
