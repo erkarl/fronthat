@@ -5,27 +5,24 @@
     letter-spacing: normal;
     text-transform: none;
   }
-   .category-bulleted ul {
-     margin: 0;
-     padding: 0 0 1.1rem 0;
-     clear:both;
-   }
-   .category-bulleted ul li {
-     padding: .2em 0.5em;
-     list-style: disc;
-   }
-   ul li {
-     display: inline;
-   }
-   li {
-     color: #212121;
-     font-weight: 600;
-   }
-   .category-bulleted a {
-     color: #212121
-   }
-   li:active a,
-   li:hover a {
-     color: #af2828
-   }
+  .category-bulleted {
+  }
+  ul {
+    margin: 0;
+    padding: 0 0 1.1rem 0;
+    clear: both;
+  }
+  .list-item {
+    padding: .2em 0.5em;
+    list-style: disc;
+    display: inline;
+    color: #212121;
+    font-weight: 600;
+  }
+  .category-item-link {
+    color: #212121;
+    &:hover {
+      color: #af2828
+    }
+  }
 }
