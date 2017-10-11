@@ -10,20 +10,50 @@ export default Component.extend({
       <p class="mail-paragraph">Want to stay updated with newly posted jobs? Join our <a href="https://www.getdrip.com/forms/64302472/submissions/new" rel="noopener noreferrer" target="_blank">mailing list</a>! </p>
     </div>
     <div class="category-bulleted">
-    <ul>
-    <li><a href="/frontend" id="ember345" class="show-all ember-view">
-• Frontend</a></li>
-    <li><a href="/backend" id="ember355" class="show-all ember-view">• Backend
-</a></li>
-    <li><a href="/full-stack" id="ember365" class="show-all ember-view">• Full-stack
-</a></li>
-    <li><a href="/design" id="ember375" class="show-all ember-view">• Design
-</a></li>
-    <li><a href="/ios-and-android" id="ember385" class="show-all ember-view">• iOS & Android
-</a></li>
-    <li><a href="/other" id="ember395" class="show-all ember-view">• Other
-</a> </li>
-    </ul>
+      <ul>
+        <li class="list-item">
+          {{#link-to 'frontend'
+            class="category-item-link"
+          }}
+            Frontend
+          {{/link-to}}
+        </li>
+        <li class="list-item">
+          {{#link-to 'backend'
+            class="category-item-link"
+          }}
+            Backend
+          {{/link-to}}
+        </li>
+        <li class="list-item">
+          {{#link-to 'full-stack'
+            class="category-item-link"
+          }}
+            Full-Stack
+          {{/link-to}}
+        </li>
+        <li class="list-item">
+          {{#link-to 'design'
+            class="category-item-link"
+          }}
+            Design
+          {{/link-to}}
+        </li>
+        <li class="list-item">
+          {{#link-to 'ios-and-android'
+            class="category-item-link"
+          }}
+            iOS & Android
+          {{/link-to}}
+        </li>
+        <li class="list-item">
+          {{#link-to 'other'
+            class="category-item-link"
+          }}
+            Other
+          {{/link-to}}
+        </li>
+      </ul>
     </div>
   `
 });
