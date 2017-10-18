@@ -21,7 +21,7 @@ describe('index', function() {
         let $ = res.jQuery;
         let response = res.response;
 
-        expect($('title').text()).to.equal("Remote development and design jobs | FrontHAT");
+        expect($('title').text()).to.equal("Remote Development and Design Jobs | FrontHAT");
       });
   });
 
