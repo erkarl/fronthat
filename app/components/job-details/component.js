@@ -27,6 +27,7 @@ export default Component.extend(ScrollToTop, {
       {{#link-to job.attributes.category class="nav-button view-similar-link"}}
         View Similar
       {{/link-to}}
+      <p>Not a remote job?<a href="mailto:the@fronthat.com" rel="noopener noreferrer" target="_blank"><br class="rwd-break"> Please let us know!</a> </p>
       <a href={{job.attributes.url}} target="_blank" class="nav-button" itemprop="url">
         Apply
       </a>
