@@ -31,5 +31,10 @@ export default Component.extend(ScrollToTop, {
         Apply
       </a>
     </div>
+    <div class="report-container">
+      <p>
+        Not a remote job? <a href="mailto:the@fronthat.com" rel="noopener noreferrer" target="_blank"> Please let us know!</a>
+      </p>
+    </div>
   `
 });
