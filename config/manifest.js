@@ -5,7 +5,7 @@ module.exports = function(/* environment, appConfig */) {
   return {
     name: "FrontHAT",
     short_name: "FrontHAT",
-    description: "100% Remote Front-End Jobs",
+    description: "100% Remote Development & Design Jobs",
     start_url: "/",
     display: "standalone",
     background_color: "#EEE",
