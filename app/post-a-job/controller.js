@@ -1,10 +1,11 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import Controller from '@ember/controller';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
   queryParams: ['PROMOCODE'],
   PROMOCODE: null,
 
-  freePost: Ember.computed('PROMOCODE', function() {
+  freePost: computed('PROMOCODE', function() {
     return this.get('PROMOCODE') === 'LjzjPydx';
   })
 });
