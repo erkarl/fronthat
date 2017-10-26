@@ -6622,7 +6622,7 @@ redux-offline@2.0.0:
   dependencies:
     redux-persist "^4.5.0"
 
-redux-persist@^4.5.0, redux-persist@^4.8.0:
+redux-persist@4.8.0, redux-persist@^4.5.0:
   version "4.8.0"
   resolved "https://registry.yarnpkg.com/redux-persist/-/redux-persist-4.8.0.tgz#17fd998949bdeef9275e4cf60ad5bbe1c73675fc"
   dependencies:
