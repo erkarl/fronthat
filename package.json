@@ -12,7 +12,8 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "bundlesize && ember test && ember fastboot:test"
+    "testbundle": "yarn build --prod && bundlesize",
+    "test": "ember test && ember fastboot:test && yarn testbundle"
   },
   "devDependencies": {
     "@html-next/vertical-collection": "^1.0.0-beta.8",
