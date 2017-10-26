@@ -1,0 +1,16 @@
+& {
+  .service-worker-notifier {
+    min-height: 3rem;
+    background: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00405f;
+    a {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
