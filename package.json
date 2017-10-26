@@ -93,12 +93,16 @@
   },
   "bundlesize": [
     {
+      "path": "./dist/assets/fronthat-fastboot*.js",
+      "maxSize": "800 kB"
+    },
+    {
       "path": "./dist/assets/fronthat*.js",
-      "maxSize": "3 kB"
+      "maxSize": "20 kB"
     },
     {
       "path": "./dist/assets/vendor*.js",
-      "maxSize": "3 kB"
+      "maxSize": "300 kB"
     }
   ]
 }
