@@ -18,7 +18,7 @@
   "devDependencies": {
     "@html-next/vertical-collection": "^1.0.0-beta.8",
     "broccoli-asset-rev": "^2.4.5",
-    "bundlesize": "^0.15.3",
+    "bundlesize": "^0.16.0",
     "chai": "^4.1.2",
     "ember-ajax": "^3.0.0",
     "ember-cli": "^2.16.2",
