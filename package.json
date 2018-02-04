@@ -80,7 +80,7 @@
     "medium-editor": "^5.23.0",
     "redux": "3.7.2",
     "redux-offline": "2.0.0",
-    "redux-persist": "4.8.0",
+    "redux-persist": "5.6.9",
     "redux-thunk": "2.2.0"
   },
   "engines": {
