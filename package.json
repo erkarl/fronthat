@@ -56,7 +56,7 @@
     "ember-lodash-shim": "^2.0.0",
     "ember-native-dom-event-dispatcher": "^0.6.0",
     "ember-native-dom-helpers": "^0.5.2",
-    "ember-one-way-controls": "3.0.1",
+    "ember-one-way-controls": "3.1.0",
     "ember-page-title": "3.2.2",
     "ember-redux": "^3.0.0",
     "ember-redux-offline-shim": "1.1.0",
