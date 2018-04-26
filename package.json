@@ -71,7 +71,7 @@
     "ember-service-worker-update-notify": "^1.0.2",
     "ember-source": "~2.16.0",
     "ember-symbol-observable": "1.0.0",
-    "ember-test-selectors": "^0.3.4",
+    "ember-test-selectors": "^1.0.0",
     "ember-truth-helpers": "2.0.0",
     "ember-web-app": "2.2.0",
     "ember-web-app-rename": "^1.0.0",
