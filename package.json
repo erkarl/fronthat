@@ -61,7 +61,7 @@
     "ember-redux": "^3.0.0",
     "ember-redux-offline-shim": "1.1.0",
     "ember-redux-persist-shim": "^2.0.0",
-    "ember-redux-shim": "^2.5.0",
+    "ember-redux-shim": "^4.0.0",
     "ember-redux-thunk-shim": "^2.4.0",
     "ember-resolver": "^4.1.0",
     "ember-route-action-helper": "^2.0.3",
